@@ -1,0 +1,29 @@
+#Codigo para um Robô que esvazia a lixeira do computador 
+# utilizando o mouse e clicando nas cordenadas para realizar 
+# a função completa.
+
+import pyautogui
+import time
+
+# Aguarda alguns segundos antes de começar
+print("O robô vai começar em 5 segundos...")
+time.sleep(5)
+
+# Mover o mouse até o ícone da Lixeira
+pyautogui.moveTo(35,196, duration=1)  # exemplo: posição do ícone da lixeira
+pyautogui.rightClick()  # clica com o botão direito
+
+time.sleep(0.5)
+
+# Mover o mouse até a opção "Esvaziar Lixeira"
+pyautogui.moveTo(245, 310, duration=0.5)
+pyautogui.click()
+
+time.sleep(0.5)
+
+# Mover o mouse até a opção "Sim" para esvaziar
+pyautogui.moveTo(775,390, duration=0.5)
+pyautogui.click()
+
+print("Lixeira esvaziada (simulação concluída).")
+print("Robô Desligado")
